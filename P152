@@ -1,0 +1,23 @@
+tick: function () {
+
+    window.addEventListener("click", (e) => {   
+
+      this.data.moveX = this.data.moveX +0.005;
+
+
+ tick: function () {
+    this.data.moveZ = this.data.moveZ + 0.01;
+
+    var pos = this.el.getAttribute("position");
+
+    pos.z = this.data.moveZ;
+
+    this.el.setAttribute("position", { x: pos.x, y: pos.y, z: pos.z });
+  },
+});
+    });
+    var pos = this.el.getAttribute("position");
+    pos.x = pos.x + this.data.moveX;
+    this.el.setAttribute("position", { x: pos.x, y: pos.y, z: pos.z });
+  }
+  });
